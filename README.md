@@ -1,103 +1,39 @@
-# MCP Server UI
+# MCP Server
 
-A modern chat interface for interacting with an AI assistant and custom tools, built with Next.js, React, and Tailwind CSS.
+A modern, extensible conversational AI server built with [Next.js](https://nextjs.org/), [React](https://react.dev/), and [OpenAI](https://openai.com/) APIs. MCP Server supports chat history, session management, and tool integrations (like a calculator), providing a robust foundation for building intelligent assistants and chatbots.
 
 ---
 
 ## ✨ Features
 
-- **Conversational UI:** Clean, responsive chat interface.
-- **Tool Commands:** Run tools by typing commands (e.g., `use calculator 5*3`).
-- **Session Context:** Remembers your conversation per session.
-- **OpenAI Integration:** Powered by GPT-4o for smart responses.
-- **Instant Feedback:** Fast, interactive experience.
-
----
-
-## 🖥️ UI Preview
-
-> ![Screenshot Placeholder](public/next.svg)  
-> _Type a message or tool command and get instant replies!_
+- **Conversational AI**: Powered by OpenAI's GPT models.
+- **Session Context**: Maintains chat history per session.
+- **Tool Integration**: Easily extend with custom tools (e.g., calculator).
+- **Modern UI**: Built with React 19 and Tailwind CSS 4 for a sleek, responsive experience.
+    - Dark/light mode support
+    - Accessible components
+    - Real-time chat interface with typing indicators
+    - Message grouping and timestamps
+    - Mobile-friendly layout
+- **API-First**: RESTful endpoints for chat and context management.
+- **TypeScript**: End-to-end type safety and maintainability.
 
 ---
 
 ## 🚀 Getting Started
 
-1. **Install dependencies:**
-   ```sh
-   npm install
-   ```
+### Prerequisites
 
-2. **Set your OpenAI API key:**  
-   Create a `.env` file in the root:
-   ```
-   OPENAI_API_KEY=your-openai-key
-   ```
+- [Node.js](https://nodejs.org/) 18+
+- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- OpenAI API Key ([get one here](https://platform.openai.com/account/api-keys))
 
-3. **Start the development server:**
-   ```sh
-   npm run dev
-   ```
-   Visit [http://localhost:3000](http://localhost:3000) in your browser.
+### Installation
 
----
-
-## 🧑‍💻 How to Use
-
-- **Chat:**  
-  Type a message and click **Send**.
-- **Use a Tool:**  
-  Type `use calculator 5*3` (or similar) to run a tool.
-- **See Conversation:**  
-  All messages appear in the chat window, labeled by sender.
-
----
-
-## 🗂️ Project Structure
-
+```bash
+git clone https://github.com/yourusername/mcp-server.git
+cd mcp-server
+npm install
+# or
+yarn install
 ```
-app/
-  page.tsx         # Main chat UI
-  layout.tsx       # App layout and fonts
-  globals.css      # Tailwind and global styles
-pages/
-  api/mcp/run.ts   # API: chat & tool handler
-  api/mcp/context.ts # API: context management
-utils/
-  contextManager.ts # Session/context logic
-  tools.ts          # Tool command logic
-public/
-  next.svg         # Logo (replace with screenshot if desired)
-```
-
----
-
-## 🎨 UI Details
-
-- **Chat Window:**  
-  Shows all messages, styled with Tailwind.
-- **Input Bar:**  
-  Type your message or tool command.
-- **Send Button:**  
-  Blue, prominent, easy to use.
-
----
-
-## 🛠️ Customization
-
-- **Add More Tools:**  
-  Edit `utils/tools.ts` to add new commands.
-- **Change Styles:**  
-  Edit `app/globals.css` or use Tailwind classes in `app/page.tsx`.
-- **Session Handling:**  
-  See `utils/contextManager.ts` for context logic.
-
----
-
-## 📄 License
-
-MIT
-
----
-
-**Built with Next.js, React, Tailwind CSS, and OpenAI.**
